@@ -1,0 +1,23 @@
+header{
+  background-color: black;
+  color: white; 
+ 
+}
+nav{
+  background-color: gainsboro;
+  }
+  a{
+    color: gray;
+  }
+  #head3{
+    background-color: bisque;
+    border-radius: 5px;
+  }
+  footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+  h2 {
+    color :white;
+  }
