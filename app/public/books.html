@@ -35,11 +35,15 @@
         <!--<a href="specials.html">Specials</a> -->
       </ul>
     </nav>
-      <h2>About Us</h2>
+      
       <h3 id="head3">BOOKS</h3>
-      <p>
-        <table class="table table-striped" border = "2">
-          <tr>
+      <hr>
+      
+        <table id="tasktable" class="table table-striped" border = "2">
+          <thead>
+            <tr>
+            
+            <th>ID</th>
             <th>Title</th>
             <th>Author(s)</th>
             <th>Year Published</th>
@@ -47,7 +51,11 @@
             <th>Page Count</th>
             <th>MSRP</th>
           </tr>
+          </thead>
+          <tbody>
           <tr>
+           
+            <td>3</td>
             <td>Harry Potter Collection</td>
             <td>J.K.Rowling</td>
             <td>1997</td>
@@ -56,6 +64,7 @@
             <td>$35</td>
           </tr>
           <tr>
+            <td>2</td>
             <td>Matilda</td>
             <td>Roald Dahl</td>
             <td>2000</td>
@@ -63,6 +72,7 @@
             <td>220</td>
             <td>$29</td>
           </tr><tr>
+            <td>4</td>
             <td>And then there were none</td>
             <td>Agatha Christie</td>` 
             <td>1996</td>
@@ -71,6 +81,7 @@
             <td>$30</td>
           </tr>
           <tr>
+            <td>1</td>
             <td>Power of Subconsious mind</td>
             <td>Joseph Murphy</td>
             <td>2002</td>
@@ -78,6 +89,7 @@
             <td>189</td>
             <td>$29</td>
           </tr>
+          </tbody>
         
           
         </table>
@@ -85,8 +97,9 @@
         <br>
         <br>
         <br>
+        
         <h3 id="head3"> Form for Table </h3>
-      </p>
+        <hr>
       <form>
         <label for="title">Title:</label><br>
         <input type="text" id="title" name="title"><br>
@@ -99,11 +112,17 @@
         <label for="page count">Page Count:</label><br>
         <input type="text" id="page count" name="page count"><br>
         <label for="msrp">MSRP:</label><br>
-        <input type="text" id="msrp" name="msrp"><br>
-        <input type="submit" value="Submit">
+        <input type="text" id="msrp" name="msrp"><br><br>
+        <input class = "submit" type="submit" value="Submit">
       </form><br>
       
       
     </div>
+
+  <script src="tablesort.min.js"></script>
+  <script>
+  new Tablesort(document.getElementById('tasktable'));
+</script>
+
     </body>
 </html>
