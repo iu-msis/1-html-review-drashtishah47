@@ -2,7 +2,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Books</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- jQuery CDN -->
@@ -11,6 +13,8 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   </head>
      <body>
     <div class = "container-fluid">
@@ -34,6 +38,7 @@
         &nbsp&nbsp;<a href="kelley.html">Kelley</a> 
         <!--<a href="specials.html">Specials</a> -->
       </ul>
+      </div>
     </nav>
       
       <h3 id="head3">BOOKS</h3>
@@ -46,13 +51,23 @@
             <th>ID</th>
             <th>Title</th>
             <th>Author(s)</th>
-            <th>Year Published</th>
+            <th>Year_Published</th>
             <th>Publisher</th>
-            <th>Page Count</th>
+            <th>Page_Count</th>
             <th>MSRP</th>
           </tr>
           </thead>
           <tbody>
+            <tr v-for="book in books">
+              <td>{{ books.title }}</td>
+              <td>{{ books.author }}</td>
+              <td>{{ books.yearpub }}</td>
+              <td>{{ books.publisher}}</td>
+              <td>{{ books.pagecount }}</td>
+              <td>{{ books.msrp }}</td>
+            </tr>
+          </tbody>
+          <!-- <tbody>
           <tr>
            
             <td>3</td>
@@ -91,7 +106,7 @@
           </tr>
           </tbody>
         
-          
+           -->
         </table>
         <br>
         <br>
@@ -100,7 +115,7 @@
         
         <h3 id="head3"> Form for Table </h3>
         <hr>
-      <form>
+      <form action='books.html' method='post'>
         <label for="title">Title:</label><br>
         <input type="text" id="title" name="title"><br>
         <label for="author">Author:</label><br>
@@ -123,6 +138,9 @@
   <script>
   new Tablesort(document.getElementById('tasktable'));
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script src="js/main.js"></script>
 
     </body>
 </html>

@@ -2,6 +2,7 @@ const Person = {
     data() {
       return {
         "person": {},
+        "books":[]
       }
     },
     created() {
@@ -34,3 +35,28 @@ const Person = {
   }
   
   Vue.createApp(Person).mount('#personApp');
+
+  fetchBookData(){
+    fetch('/api/books/')
+    .then( response => response.json() )
+    .then( (responseJson) => {
+        console.log(responseJson);
+        this.books = responseJson;
+        console.log(this.books);
+        console.log(books);
+    })
+    .catch( (err) => {
+        console.log(this.books);
+        console.error(err);
+    })
+}
+},
+created() {
+this.fetchBookData();
+}
+
+}
+
+Vue.createApp(App).mount('#bookApp');
+
+console.log("Z");
