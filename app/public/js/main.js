@@ -7,6 +7,7 @@ const Person = {
     },
     created() {
       this.refreshUser();
+      this.fetchBookData();
       console.log("B");
     },
     computed: {
@@ -30,33 +31,22 @@ const Person = {
         .catch(err => {
           console.error(err)
         })
-      }
+      },
+      fetchBookData(){
+        fetch('/api/books/')
+        .then( response => response.json() )
+        .then( (responseJson) => {
+            console.log(responseJson);
+            this.books = responseJson;
+            console.log(this.books);
+            console.log(books);
+        })
+        .catch( (err) => {
+            console.log(this.books);
+            console.error(err);
+        })
+    }
     }
   }
-  
-  Vue.createApp(Person).mount('#personApp');
+Vue.createApp(Person).mount('#personApp');
 
-  fetchBookData(){
-    fetch('/api/books/')
-    .then( response => response.json() )
-    .then( (responseJson) => {
-        console.log(responseJson);
-        this.books = responseJson;
-        console.log(this.books);
-        console.log(books);
-    })
-    .catch( (err) => {
-        console.log(this.books);
-        console.error(err);
-    })
-}
-},
-created() {
-this.fetchBookData();
-}
-
-}
-
-Vue.createApp(App).mount('#bookApp');
-
-console.log("Z");

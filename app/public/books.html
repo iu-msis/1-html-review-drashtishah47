@@ -31,7 +31,7 @@
        </div>
 
 
-      <div class ="collapse navbar-collapse id="myMenu">
+      <div class ="collapse navbar-collapse" id="myMenu">
       <ul class="nav navbar-nav">
         <a href="index.html">User Information</a>&nbsp;
         &nbsp&nbsp;<a href="books.html">Books</a>&nbsp;
@@ -43,7 +43,7 @@
       
       <h3 id="head3">BOOKS</h3>
       <hr>
-      
+      <div id="personApp">
         <table id="tasktable" class="table table-striped" border = "2">
           <thead>
             <tr>
@@ -59,12 +59,13 @@
           </thead>
           <tbody>
             <tr v-for="book in books">
-              <td>{{ books.title }}</td>
-              <td>{{ books.author }}</td>
-              <td>{{ books.yearpub }}</td>
-              <td>{{ books.publisher}}</td>
-              <td>{{ books.pagecount }}</td>
-              <td>{{ books.msrp }}</td>
+              <td>{{ book.id }}</td>
+              <td>{{ book.title }}</td>
+              <td>{{ book.author }}</td>
+              <td>{{ book.yearpub }}</td>
+              <td>{{ book.publisher}}</td>
+              <td>{{ book.pagecount }}</td>
+              <td>{{ book.msrp }}</td>
             </tr>
           </tbody>
           <!-- <tbody>
@@ -108,6 +109,7 @@
         
            -->
         </table>
+      </div>
         <br>
         <br>
         <br>
