@@ -1,8 +1,8 @@
-CREATE DATABASE IF NOT EXISTS msisdb;
-USE msisdb;
+CREATE DATABASE IF NOT EXISTS databaseserver;
+USE databaseserver;
 
+drop table Books;
 
-DROP TABLE IF EXISTS Books;
 CREATE TABLE `Books` (
   `id` INT AUTO_INCREMENT NOT NULL,
   `Title` VARCHAR(200) NULL,
@@ -14,8 +14,8 @@ CREATE TABLE `Books` (
   PRIMARY KEY (`id`));
 
 
-INSERT INTO Books ( Title, Author, Year_Published,Publisher,Page_Count, MSRP ) VALUES 
-('Harry Potter Collection','JK Rowling',1997,'Bloomsbury publishing',650,100),
-('Matilda','Roald Dahl',1978,'Jonathan Cape',267,205),
-('And then there were none','Agatha Christie',1996,'Penguin',342,45),
-('Power of the subconscious mind','Joseph Murphy',2007,'Apress',215,65 );
+INSERT INTO Books (id, Title, Author, Year_Published,Publisher,Page_Count, MSRP ) VALUES 
+(1, 'Harry Potter Collection','JK Rowling',1997,'Bloomsbury publishing',650,100),
+(2, 'Matilda','Roald Dahl',1978,'Jonathan Cape',267,205),
+(3, 'And then there were none','Agatha Christie',1996,'Penguin',342,45),
+(4, 'Power of the subconscious mind','Joseph Murphy',2007,'Apress',215,65 );
