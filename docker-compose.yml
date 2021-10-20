@@ -1,9 +1,9 @@
 version: "3"
 services:
-  phptriage:
+  msis-salary :
     build: .
     ports:
-      - "8082:80"
+      - "8085:80"
     volumes:
       - ./app/public:/srv/app/public
     env_file:
